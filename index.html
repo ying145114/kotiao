@@ -4,3 +4,33 @@
 <p>空调网站项目:https://github.com/YunYouJun/air-conditioner
 <p>这是开源的
 post.content + %Q[<p class='post-footer'>&nbsp;#{pre or "原文地址："}<a href='#{post.full_url}'>#{post.full_url}</a><br/>&nbsp;版权声明：自由转载-非商用-非衍生-保持署名| <a href='http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh'>Creative Commons BY-NC-ND 3.0</a></p>]
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#409EFF" />
+  <meta name="description" content="Air Conditioner" />
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <title>便携小空调 - 为你的夏日带去清凉！</title>
+  <script>
+    (function () {
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+      const setting = (localStorage.getItem('usehooks-ts-dark-mode') === 'true' ? 'dark' : 'light') || 'auto'
+      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+        document.documentElement.classList.toggle('dark', true)
+    })()
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>
